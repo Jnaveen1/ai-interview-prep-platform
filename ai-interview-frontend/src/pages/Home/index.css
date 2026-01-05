@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  /* overflow: hidden; */
+}
+
+/* Header height = 70px */
+.home-container {
+  height: calc(100vh - 70px);   /* key fix */
+  width: 100%;                 /* never use 100vw */
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* header {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+} */

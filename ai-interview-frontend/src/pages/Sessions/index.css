@@ -1,0 +1,79 @@
+/* Page wrapper */
+.session-main-container {
+  background-color: aqua;
+  position: relative;
+  width: 100vw;            /* force viewport width */
+  min-height: 100vh;
+  padding-top: 80px;       /* header height */
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  color: white;
+}
+
+
+
+/* Page title */
+.session-main-container h2 {
+  margin: 24px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Grid layout */
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.session-card {
+  background-color: #16a34a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Disable hover click for pending */
+.session-card:has(.status-pending) {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Status badge */
+.status-completed,
+.status-pending {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-completed {
+  background: #16a34a;
+  color: #ecfdf5;
+}
+
+.status-pending {
+  background: #ca8a04;
+  color: #fffbeb;
+}
+
+/* Text spacing */
+.session-card p {
+  margin: 8px 0;
+}
+
+/* Error */
+.error {
+  color: #f87171;
+  margin-bottom: 16px;
+}
