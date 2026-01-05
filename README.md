@@ -78,8 +78,13 @@ backend/
 ### Backend
 ```bash
 cd backend
+npx nodemon
+
+### Frontend
+cd frontend
 npm install
 npm run dev
+
 
 📌 Future Improvements
 Session status auto‑refresh
